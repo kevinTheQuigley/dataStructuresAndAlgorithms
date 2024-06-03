@@ -36,6 +36,7 @@ class LinkedList:
             return None
             
         elif self.length ==1:
+            print("popping the last node")
             node = self.head
             self.node =None
             self.head =None
@@ -47,8 +48,10 @@ class LinkedList:
             noder = self.head
             for i in range(self.length):
                 if noder.next ==lastNode:
+                    print("popping a node")
                     noder.next==None
                     self.tail = noder
+                    self.length -=1
                     return lastNode
 
                 else:
