@@ -76,19 +76,15 @@ class LinkedList:
         print(f"next value is {nextNode.value} and the following value is {nextNode.next}")
 
         if nextNode.next is None:
-            print("------------NextNode.next is None-------")
             nextNode.next = currentNode
             finalNode = nextNode
             print(f"Final reverse: as nextNode is None {finalNode.value}->{finalNode.next.value} ")
             print(f"After reversing: {finalNode.value}->{finalNode.next.value} ->{finalNode.next.next.value}->{finalNode.next.next.value}")
             print(f"After reversing: {self.head.value}->{self.head.next.value} ->{self.head.next.next.value}->{self.head.next.next.value}")
         else:
-            print("------------NextNode.next is NOT None-------")
-            nextNextNode = nextNode.next
-            nextNode.next = currentNode
-            preStartingNode.next = nextNode
-            postFinalNode = nextNextNode
+            postFinalNode = nextNode.next
             finalNode = nextNode
+            print(f"Final reverse : {finalNode.value}->{finalNode.next.value} ")
         """
         if nextNode.next is None:
             startingNode.next = nextNode
